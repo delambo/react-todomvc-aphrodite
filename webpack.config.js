@@ -1,27 +1,23 @@
 
-var webpack = require('webpack')
-var path = require('path')
+const webpack = require('webpack')
+const path =  require('path')
+const merge = require('ramda').merge
 
-var env = process.env.NODE_ENV || 'development';
+const env = process.env.NODE_ENV || 'development';
 
 module.exports = {
   context: path.join(__dirname, './client'),
   node: { fs: 'empty' },
-  entry:
-    env === 'development'
-      ? {
-          jsx: './index.js',
-          html: './index.html',
-          vendor: ['react']
-        }
-      : {},
-  output: 
-    env === 'development'
-      ? {
-          path: path.join(__dirname, './static'),
-          filename: 'bundle.js',
-        }
-      : {},
+  entry: merge({
+      jsx: './index.js',
+      vendor: ['react']
+    },
+    env === 'development' ? { html: './index.html' } : {}
+  ),
+  output: {
+    path: path.join(__dirname, './static'),
+    filename: 'bundle.js',
+  },
   module: {
     loaders: [
       {

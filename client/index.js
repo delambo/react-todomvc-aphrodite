@@ -11,6 +11,9 @@ import configure from './store'
 const store = configure()
 const history = syncHistoryWithStore(browserHistory, store)
 
+// Rehydrate the styles when in production.
+if (process.env === 'production') StyleSheet.rehydrate(window.styles)
+
 ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>

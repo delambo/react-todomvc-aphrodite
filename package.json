@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server -d --history-api-fallback --hot --inline --progress --colors --port 3000",
-    "log-css": "BABEL_DISABLE_CACHE=1 NODE_ENV=STATIC node_modules/.bin/babel-node client/log-css.js"
+    "production": "NODE_ENV=production webpack --progress --colors",
+    "build": "BABEL_DISABLE_CACHE=1 node_modules/.bin/babel-node client/prod-index.js && npm run production"
   },
   "license": "MIT",
   "devDependencies": {
     "aphrodite": "^0.4.0",
     "autoprefixer": "^6.3.7",
+    "babel-cli": "^6.10.1",
     "babel-core": "^6.5.2",
     "babel-loader": "^6.2.3",
     "babel-plugin-ramda": "^1.1.5",

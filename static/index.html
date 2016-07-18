@@ -1,0 +1,59 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Boilerplate Todos</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 1.4em;
+        background: #f5f5f5;
+        color: #4d4d4d;
+        min-width: 230px;
+        max-width: 550px;
+        margin: 0 auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-font-smoothing: antialiased;
+        -ms-font-smoothing: antialiased;
+        font-smoothing: antialiased;
+        font-weight: 300;
+      }
+    </style>
+    <style data-aphrodite>.normal_1aprzl6{background:#fff !important;margin:200px 0 40px 0 !important;position:relative !important;box-shadow:0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1) !important;}.h1_1trqhpp{position:absolute !important;top:-155px !important;width:100% !important;font-size:100px !important;font-weight:100 !important;text-align:center !important;text-rendering:optimizeLegibility !important;color:rgba(175, 47, 47, 0.15) !important;}.edit_alb4rv{position:relative !important;margin:0px !important;width:100% !important;font-size:24px !important;font-family:inherit !important;font-weight:inherit !important;line-height:1.4em !important;border:1px solid #999 !important;outline:none !important;color:inherit !important;padding:6px !important;box-shadow:inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2) !important;box-sizing:border-box !important;font-smoothing:antialiased !important;-moz-box-sizing:border-box !important;}.new_1e05jt1{position:relative !important;margin:0px !important;width:100% !important;font-size:24px !important;font-family:inherit !important;font-weight:inherit !important;line-height:1.4em !important;border:none !important;outline:none !important;color:inherit !important;padding:16px 16px 16px 60px !important;box-shadow:inset 0 -2px 1px rgba(0, 0, 0, 0.03) !important;box-sizing:border-box !important;font-smoothing:antialiased !important;background:rgba(0, 0, 0, 0.003) !important;-moz-box-sizing:border-box !important;}.main_1dz3wf2{position:relative !important;z-index:2 !important;border-top:1px solid #e6e6e6 !important;}.toggleAll_jczvva-o_O-toggleDevice_1ak0tv5{outline:none !important;position:absolute !important;top:-55px !important;left:-12px !important;width:60px !important;height:34px !important;text-align:center !important;border:none !important;}.toggleAll_jczvva-o_O-toggleDevice_1ak0tv5:before{content:"❯" !important;font-size:22px !important;color:#e6e6e6 !important;padding:10px 27px 10px 27px !important;}.toggleAll_jczvva-o_O-toggleDevice_1ak0tv5:checked:before{color:#737373 !important;}@media screen and (-webkit-min-device-pixel-ratio:0){.toggleAll_jczvva-o_O-toggleDevice_1ak0tv5{transform:rotate(90deg) !important;appearance:none !important;-webkit-appearance:none !important;-webkit-transform:rotate(90deg) !important;-ms-transform:rotate(90deg) !important;-webkit-appearance:none !important;-moz-appearance:none !important;}}.normal_6sknms{margin:0px !important;padding:0px !important;list-style:none !important;}.hideView_avg348{display:none !important;}.toggle_1vzs1o6-o_O-toggleDevice_16vi9nt{outline:none !important;text-align:center !important;width:40px !important;height:auto !important;position:absolute !important;top:0px !important;bottom:0px !important;margin:auto 0 !important;border:none !important;appearance:none !important;-webkit-appearance:none !important;-webkit-appearance:none !important;-moz-appearance:none !important;}.toggle_1vzs1o6-o_O-toggleDevice_16vi9nt:after{content:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#ededed" stroke-width="3"/></svg>') !important;}.toggle_1vzs1o6-o_O-toggleDevice_16vi9nt:checked:after{content:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#bddad5" stroke-width="3"/><path fill="#5dc2af" d="M72 25L42 71 27 56l-4 4 20 20 34-52z"/></svg>') !important;}@media screen and (-webkit-min-device-pixel-ratio:0){.toggle_1vzs1o6-o_O-toggleDevice_16vi9nt{background:none !important;height:40px !important;}}.label_10v7658{white-space:pre-line !important;word-break:break-all !important;padding:15px 60px 15px 15px !important;margin-left:45px !important;display:block !important;line-height:1.2 !important;transition:color 0.4s !important;-webkit-transition:color 0.4s !important;}.completedLabel_1nsv169{color:#d9d9d9 !important;text-decoration:line-through !important;}.destroy_13qqlhv{margin:auto 0 !important;padding:0px !important;border:0px !important;background:none !important;font-size:30px !important;vertical-align:baseline !important;font-family:inherit !important;font-weight:inherit !important;color:#cc9a9a !important;appearance:none !important;font-smoothing:antialiased !important;outline:none !important;display:none !important;position:absolute !important;top:0px !important;right:10px !important;bottom:0px !important;width:40px !important;height:40px !important;margin-bottom:11px !important;transition:color 0.2s ease-out !important;-webkit-appearance:none !important;-moz-appearance:none !important;-webkit-transition:color 0.2s ease-out !important;}.destroy_13qqlhv:hover{color:#af5b5e !important;}.destroy_13qqlhv:after{content:"×" !important;}.normal_16bowhj{position:relative !important;font-size:24px !important;border-bottom:1px solid #ededed !important;}.normal_16bowhj:last-child{border-bottom:none !important;}.normal_16bowhj:hover .destroy{display:block !important;}.editing_141wd3c{border-bottom:none !important;padding:0px !important;composes:normal !important;}.editing_141wd3c:last-child{margin-bottom:-1px !important;}.normal_5d9asb-o_O-smallNormal_1d8p3en{color:#777 !important;padding:10px 15px !important;height:20px !important;text-align:center !important;border-top:1px solid #e6e6e6 !important;}.normal_5d9asb-o_O-smallNormal_1d8p3en:before{content:"" !important;position:absolute !important;right:0px !important;bottom:0px !important;left:0px !important;height:50px !important;overflow:hidden !important;box-shadow:0 1px 1px rgba(0, 0, 0, 0.2), 0 8px 0 -3px #f6f6f6, 0 9px 1px -3px rgba(0, 0, 0, 0.2), 0 16px 0 -6px #f6f6f6, 0 17px 2px -6px rgba(0, 0, 0, 0.2) !important;}@media (max-width: 430px){.normal_5d9asb-o_O-smallNormal_1d8p3en{height:50px !important;}}.count_9skw74{float:left !important;text-align:left !important;}.strong_pw9p4f{font-weight:300 !important;}.filters_150lihp-o_O-smallFilters_1oiwru{margin:0px !important;padding:0px !important;list-style:none !important;position:absolute !important;right:0px !important;left:0px !important;}@media (max-width: 430px){.filters_150lihp-o_O-smallFilters_1oiwru{bottom:10px !important;}}.filtersItem_10f0ge3{display:inline !important;}.filterLink_myw4x3{color:inherit !important;margin:3px !important;padding:3px 7px !important;text-decoration:none !important;border:1px solid transparent !important;border-radius:3px !important;}.filterLink_myw4x3:hover{border-color:rgba(175, 47, 47, 0.1) !important;}.filterLinkHighlight_6lz7fe{border-color:rgba(175, 47, 47, 0.1) !important;}</style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- This script adds the Roboto font to our project. For more detail go to this site:  http://www.google.com/fonts#UsePlace:use/Collection:Roboto:400,300,500 -->
+    <script>
+      var WebFontConfig = {
+        google: { families: [ 'Roboto:400,300,500:latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    </script>
+
+    <script>
+      window.styles = ["normal_1aprzl6","h1_1trqhpp","edit_alb4rv","new_1e05jt1","main_1dz3wf2","toggleAll_jczvva-o_O-toggleDevice_1ak0tv5","normal_6sknms","hideView_avg348","toggle_1vzs1o6-o_O-toggleDevice_16vi9nt","label_10v7658","completedLabel_1nsv169","destroy_13qqlhv","normal_16bowhj","editing_141wd3c","normal_5d9asb-o_O-smallNormal_1d8p3en","count_9skw74","strong_pw9p4f","filters_150lihp-o_O-smallFilters_1oiwru","filtersItem_10f0ge3","filterLink_myw4x3","filterLinkHighlight_6lz7fe"];
+    </script>
+
+    <script src="/vendor.bundle.js"></script>
+    <script src="/bundle.js"></script>
+
+  </body>
+</html>
+

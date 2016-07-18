@@ -1,1 +1,2 @@
-# react-todomvc-aphrodite
+# Aphrodite Todomvc Example
+
